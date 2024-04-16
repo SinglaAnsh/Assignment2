@@ -1,0 +1,56 @@
+﻿@page
+@* @page => This is just a razor page using the @ sign "The Transition Character": *@
+@model ClassCrafts.Pages.AboutModel
+@{
+	// C# block 
+	// we can write C# statements
+		/*
+		* we can add multiple statements
+		*/
+	string topic = "ASP.NET Core Web Application";
+
+	ViewData["Title"] = "About Us";
+}
+
+@*     
+	/*
+     * IMPORTANT NOTES:
+     * ***************
+     * > The "ViewData" dictionary is a dynamic object, which means any type can be used.
+     * > The ViewData object has no defined properties until something is added
+  *@
+
+
+@* 
+<?php
+ // we used to write php 
+?> 
+*@
+
+@* Below are the normal page content *@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+        }
+        </style>
+<h1>About Us</h1>
+<ul>
+	<li>Mohmed Sameer</li>
+	<li>Ansh Singla</li>
+	<li>Purav Sidhu</li>
+</ul>
+
+<p>We are learning @topic now!</p>

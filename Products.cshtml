@@ -1,0 +1,65 @@
+﻿@page
+@* Any .cshtml file has its own Model C# file *@
+@model ClassCrafts.Pages.ProductsModel
+@{
+	// C# code in between @{ and }
+	ViewData["Title"] = "Product List";
+}
+<style>
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		border: 1px solid black;
+		padding: 8px;
+		text-align: left;
+	}
+
+	th {
+		background-color: #f2f2f2;
+	}
+</style>
+@* list all the products *@
+<h2>Product List</h2>
+<!-- Using "Model" as special keyword to access the "Products" -->
+<!-- The initial basic loop just for displaying the JSON contents: -->
+@*
+@foreach (var product in Model.Products)
+{
+	<h2>@product.Maker</h2>
+}
+*@
+@*
+	Title
+	Image
+	Maker
+	Desc
+*@
+<table>
+	<tr>
+		<!-- Table headers -->
+		<th>Id</th>
+		<th>Title</th>
+		<th>Image</th>
+		<th>Maker</th>
+		<th>Description</th>
+		
+	</tr>
+@foreach (var product in Model.Products)
+{
+	// display the products:
+	<tr>
+		<td>@product.Id</td>
+			<td>@product.Title</td>
+			@* <img src="" alt="product" /> *@
+			<td><img src="@product.Image" alt="product" style="width: 150px; height: 150px;" /></td>
+			<td>@product.Maker</td>
+			<td>@product.Description</td>
+			
+	</tr>
+
+}
+</table>
+

@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@*
+@model => specify the "Model Type"" for this "Index" page
+using the "IndexModel" model class
+The "IndexModel" class is created inside its corresponding .cs file
+which is inside "index.cshtml.cs" => open and check the file :-)
+*@
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Welcome</h1>
+        <p>Thank you for visiting our watch company's website. Here, you can explore our latest collection of watches and learn about our commitment to quality and craftsmanship.</p>
+        <p>This project is built using the following tools, software, and languages:</p>
+        <ul class="list-unstyled">
+            <li>ASP.NET Core MVC</li>
+            <li>C# programming language</li>
+            <li>HTML</li>
+            <li>CSS (Bootstrap framework)</li>
+            <li>Visual Studio IDE</li>
+            <li>SQL Server (for database management)</li>
+        </ul>
+        <p>Feel free to <a href="https://learn.microsoft.com/aspnet/core">explore more about building Web apps with ASP.NET Core</a>.</p>
+    </div>
+</body>
+</html>
+
